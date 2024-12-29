@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/*.g.dart": true,
+        "**/*.freezed.dart": true,
+        "**/*.gr.dart": true,
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.inlayHints.enabled": "on",
+    "cmake.ignoreCMakeListsMissing": true,
+}
