@@ -1,3 +1,4 @@
+import 'package:bulk_namer_hq/drawer.dart';
 import 'package:bulk_namer_hq/files.dart';
 import 'package:bulk_namer_hq/input.dart';
 import 'package:bulk_namer_hq/preview.dart';
@@ -28,20 +29,24 @@ class BulkNamerHQ extends StatelessWidget {
       themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Bulk Namer HQ'),
-            actions: [
-              FileSelectButton(),
-            ],
-          ),
-          body: Column(
+        appBar: AppBar(
+          title: Text('Bulk Namer HQ'),
+          actions: [
+            FileSelectButton(),
+          ],
+        ),
+        drawer: const CustomDrawer(),
+        body: SafeArea(
+          child: Column(
             children: [
               Expanded(
                 child: FilesChangePreviewSwich(),
               ),
               RuleForm(),
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }

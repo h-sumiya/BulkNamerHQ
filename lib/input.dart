@@ -304,7 +304,7 @@ class ManualForm extends HookConsumerWidget {
 
     void insert(String rawValue) {
       final value = '{$rawValue}';
-      final currentPosition = textController.selection.start;
+      final currentPosition = textController.selection.start.clamp(0, textController.text.length);
       final text = textController.text;
       final newText = text.substring(0, currentPosition) +
           value +
